@@ -13,17 +13,17 @@ It can be used from another Java project by including the following dependency:
 </dependency>
 ```
 
-To override swagger configuration params include a **microfocus-config.js** file, similar to the one included [here](./src/main/swagger/microfocus-config.js):
+To override swagger configuration params include a **microfocus-config.js** file, similar to the one [here](./src/main/swagger/microfocus-config.js):
 
 Swagger configuration params that can be set in microfocus-config.js:
-url: "api-docs/swagger.yaml"
-dom_id: "#swagger-ui
-operationsSorter: "alpha"
-tagsSorter: "alpha"
-docExpansion: "none"
-defaultModelsExpandDepth: -1
-deepLinking: true
+ - url: "api-docs/swagger.yaml"
+ - dom_id: "#swagger-ui
+ - operationsSorter: "alpha"
+ - tagsSorter: "alpha"
+ - docExpansion: "none"
+ - defaultModelsExpandDepth: -1
+ - deepLinking: true
 
-For a complete list of configuration params refer [Swagger configuration params](https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/configuration.md#core)
+For a complete list of swagger configuration params refer [Swagger configuration params](https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/configuration.md#core).
 
 Sytle configuration can be overriden by including a file called **microfocus-swagger-ui.css**.
