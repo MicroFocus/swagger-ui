@@ -13,9 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-window.onload = function() {
-    // Begin Swagger UI call region
-    const ui = SwaggerUIBundle({
+window.onload = function () {
+    window.ui = SwaggerUIBundle({
         url: "https://petstore.swagger.io/v2/swagger.json",
         dom_id: '#swagger-ui',
         deepLinking: true,
@@ -27,8 +26,5 @@ window.onload = function() {
             SwaggerUIBundle.plugins.DownloadUrl
         ],
         layout: "StandaloneLayout"
-    })
-    // End Swagger UI call region
-
-    window.ui = ui
-}
+    });
+};
