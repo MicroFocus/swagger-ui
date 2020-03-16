@@ -84,7 +84,7 @@
     </dependencies>
 
     <build>
-        <resources>            
+        <resources>
             <resource>
                 <!--Copy microfocus branding override files-->
                 <directory>src/main/swagger</directory>
@@ -99,7 +99,7 @@
                 <!--Create jar with just the project version folder-->
                 <directory>${project.build.directory}/swagger-ui</directory>
                 <includes>
-                  <include>META-INF/resources/webjars/microfocus-swagger-ui-dist/${project.version}/*</include>
+                    <include>META-INF/resources/webjars/microfocus-swagger-ui-dist/${project.version}/*</include>
                 </includes>
             </resource>
         </resources>
@@ -127,7 +127,6 @@
                     </execution>
                 </executions>
             </plugin>
-            
         </plugins>
     </build>
 
