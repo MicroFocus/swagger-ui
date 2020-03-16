@@ -25,5 +25,3 @@ Swagger configuration params that can be set in microfocus-config.js:
  - deepLinking: true
 
 For a complete list of swagger configuration params refer [Swagger configuration params](https://github.com/swagger-api/swagger-ui/blob/master/docs/usage/configuration.md#core).
-
-Sytle configuration can be overriden by including a file called **microfocus-swagger-ui.css**.
