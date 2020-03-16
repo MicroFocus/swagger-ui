@@ -88,12 +88,18 @@
             <resource>
                 <!--Copy microfocus branding override files-->
                 <directory>src/main/swagger</directory>
-                <targetPath>${project.build.directory}/swagger-ui/META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}</targetPath>
+                <targetPath>
+                    ${project.build.directory}/swagger-ui/META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}
+                </targetPath>
             </resource>
             <resource>
                 <!--Make project version folder-->
-                <directory>${project.build.directory}/swagger-ui/META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}</directory>
-                <targetPath>${project.build.directory}/swagger-ui/META-INF/resources/webjars/microfocus-swagger-ui-dist/${project.version}</targetPath>
+                <directory>
+                    ${project.build.directory}/swagger-ui/META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}
+                </directory>
+                <targetPath>
+                    ${project.build.directory}/swagger-ui/META-INF/resources/webjars/microfocus-swagger-ui-dist/${project.version}
+                </targetPath>
             </resource>
             <resource>
                 <!--Create jar with just the project version folder-->
