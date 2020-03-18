@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 window.onload = function () {
+    document.title = "Micro Focus Swagger UI";
     window.ui = SwaggerUIBundle({
         url: "https://petstore.swagger.io/v2/swagger.json",
         dom_id: '#swagger-ui',

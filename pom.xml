@@ -125,8 +125,7 @@
                                     <artifactId>swagger-ui-dist</artifactId>
                                     <version>${swagger-ui-version}</version>
                                     <outputDirectory>${project.build.directory}/swagger-ui</outputDirectory>
-                                    <excludes>META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/index.html</excludes>
-                                    <excludes>META-INF/maven</excludes>
+                                    <excludes>META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/index.html,META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/favicon-16x16.png,META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/favicon-32x32.png,META-INF/maven</excludes>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
