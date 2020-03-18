@@ -1,6 +1,6 @@
-# Microfocus Swagger UI
+# Micro Focus Swagger UI
 
-This project is a Microfocus branded version of the [Swagger UI](https://github.com/swagger-api/swagger-ui).
+This project is a Micro Focus branded version of the [Swagger UI](https://github.com/swagger-api/swagger-ui).
 
 ## Usage
 
