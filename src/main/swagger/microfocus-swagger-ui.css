@@ -13,3 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+.topbar {
+    background-color: #0073e7 !important;
+}
+
+.swagger-ui .topbar a img{
+    width: 0% !important
+}
+
+.swagger-ui .topbar a {
+    background-image: url(mf_logo_white.svg);
+    background-repeat: no-repeat;
+}
+
+.swagger-ui .topbar .download-url-wrapper input {
+    border: 2px solid #ffff !important;
+}
+
+.swagger-ui .topbar .download-url-wrapper .download-url-button {
+    background: #0073e7;
+    color: #ffff;
+    border: 2px solid #ffff;
+}
+
