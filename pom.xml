@@ -26,7 +26,7 @@
         <version>2.1.0-129</version>
     </parent>
 
-    <groupId>com.github.microfocus</groupId>
+    <groupId>com.microfocus.webjars</groupId>
     <artifactId>swagger-ui-dist</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 

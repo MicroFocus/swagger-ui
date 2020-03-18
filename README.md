@@ -8,7 +8,7 @@ It can be used from another Java project by including the following dependency:
 
 ```xml
 <dependency>
-    <groupId>com.github.microfocus</groupId>
+    <groupId>com.microfocus.webjars</groupId>
     <artifactId>swagger-ui-dist</artifactId>
 </dependency>
 ```
