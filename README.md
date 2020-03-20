@@ -71,10 +71,9 @@ public void initialize(Bootstrap<T> bootstrap) {
 ```
 
 ## Using this module in Tomcat
-1. Add the module as a `provided` dependency.
-2. Include a resource file called **microfocus-config.js** with the swagger configuration overrides, similar to the one [here](./src/main/resources/microfocus-config.js).
+1. Include a resource file called **microfocus-config.js** with the swagger configuration overrides, similar to the one [here](./src/main/resources/microfocus-config.js).
 Make sure to overide the "url" param to point to your swagger contract.
-3. Repackage the swagger assets into the war file to be deployed in Tomcat.
+2. Repackage the swagger assets into the war file to be deployed in Tomcat.
 
 **Unpack the swagger-ui artifact excluding the default configuration file**
 ```xml
