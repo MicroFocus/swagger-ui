@@ -1,0 +1,13 @@
+{
+    "name": "microfocus-swagger-ui-dist",
+    "version": "${version.unrevise}",
+    "main": "index.js",
+    "repository": "git@github.com:MicroFocus/swagger-ui.git",
+    "contributors": [
+        "Dermot Hardy <dermot.hardy@microfocus.com>",
+        "Kusuma Ghosh Dastidar <vgkusuma@microfocus.com>"
+    ],
+    "license": "Apache-2.0",
+    "dependencies": {},
+    "devDependencies": {}
+}
