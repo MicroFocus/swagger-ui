@@ -29,7 +29,7 @@ For a complete list of swagger configuration params refer [Swagger configuration
 ## Using this module in Spring Boot
 
 [Here](https://github.com/CAFapi/caf-swagger) is an example of how this swagger-ui can be used in a Spring Boot application : 
-1. Add the module as a runtime dependency.
+1. Add the module as a `runtime` dependency.
 2. Include a resource file called **microfocus-config.js** with the swagger configuration overrides, similar to the one [here](./src/main/resources/microfocus-config.js).
 Make sure to overide the "url" param to point to your swagger contract.
 3. To facilitate [serving static resources](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/config/annotation/ResourceHandlerRegistry.html) in Spring Boot override the `addResourceHandlers` function in 
@@ -51,7 +51,7 @@ public void addResourceHandlers(final ResourceHandlerRegistry registry) {
 
 ## Using this module in Dropwizard
 
-1. Add the module as a runtime dependency.
+1. Add the module as a `runtime` dependency.
 2. Include a resource file called **swagger-ui-config.js** to override the swagger configuration, similar to the one [here](./src/main/resources/microfocus-config.js).
 Make sure to overide the "url" param to point to your swagger contract.
 3. To facilitate serving static resources in Dropwizard add [AssetBundles](https://www.dropwizard.io/en/latest/manual/core.html#bundles)
@@ -69,7 +69,7 @@ public void initialize(Bootstrap<T> bootstrap) {
 ```
 
 ## Using this module in Tomcat
-1. Add the module as a provided dependency.
+1. Add the module as a `provided` dependency.
 2. Include a resource file called **microfocus-config.js** with the swagger configuration overrides, similar to the one [here](./src/main/resources/microfocus-config.js).
 Make sure to overide the "url" param to point to your swagger contract.
 3. Repackage the swagger assets into the war file to be deployed in Tomcat.
