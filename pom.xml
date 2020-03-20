@@ -65,24 +65,6 @@
         <swagger-ui-version>3.25.0</swagger-ui-version>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.webjars.npm</groupId>
-                <artifactId>swagger-ui-dist</artifactId>
-                <version>${swagger-ui-version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.webjars.npm</groupId>
-            <artifactId>swagger-ui-dist</artifactId>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
-
     <build>
         <resources>
             <resource>
