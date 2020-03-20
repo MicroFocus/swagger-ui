@@ -84,37 +84,27 @@
     </dependencies>
 
     <build>
-        <resources>
-            <resource>
-                <!--Copy microfocus branding override files-->
-                <directory>src/main/swagger</directory>
-                <targetPath>
-                    ${project.build.directory}/swagger-ui/META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}
-                </targetPath>
-            </resource>
-            <resource>
-                <!--Make project version folder-->
-                <directory>
-                    ${project.build.directory}/swagger-ui/META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}
-                </directory>
-                <targetPath>
-                    ${project.build.directory}/swagger-ui/META-INF/resources/webjars/microfocus-swagger-ui-dist/${project.version}
-                </targetPath>
-            </resource>
-            <resource>
-                <!--Create jar with just the project version folder-->
-                <directory>${project.build.directory}/swagger-ui</directory>
-                <includes>
-                    <include>META-INF/resources/webjars/microfocus-swagger-ui-dist/${project.version}/*</include>
-                </includes>
-            </resource>
-        </resources>
         <plugins>
+            <plugin>
+                <groupId>com.jamesward</groupId>
+                <artifactId>unsnapshot-maven-plugin</artifactId>
+                <version>0.2</version>
+                <executions>
+                    <execution>
+                        <id>prepare-version-number</id>
+                        <goals>
+                            <goal>unsnapshot</goal>
+                        </goals>
+                        <phase>initialize</phase>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
                     <execution>
+                        <id>unpack-swagger-ui-dist</id>
                         <goals>
                             <goal>unpack</goal>
                         </goals>
@@ -131,6 +121,29 @@
                         </configuration>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-swagger-ui-dist-resources</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <phase>process-resources</phase>
+                        <configuration>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.directory}/swagger-ui/META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <outputDirectory>${project.build.outputDirectory}/META-INF/resources/webjars/microfocus-swagger-ui-dist/${version.unrevise}</outputDirectory>
+                </configuration>
             </plugin>
         </plugins>
     </build>
