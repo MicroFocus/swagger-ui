@@ -13,7 +13,7 @@ It can be used from another Java project by including the following dependency:
 </dependency>
 ```
 
-To override swagger configuration params include a **microfocus-config.js** file, similar to the one [here](./src/main/swagger/microfocus-config.js):
+To override swagger configuration params include a **microfocus-config.js** file, similar to the one [here](./src/main/resources/microfocus-config.js):
 
 Swagger configuration params that can be set in microfocus-config.js:
  - url: "api-docs/swagger.yaml"
