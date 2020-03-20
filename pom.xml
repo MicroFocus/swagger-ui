@@ -84,6 +84,16 @@
     </dependencies>
 
     <build>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>${project.basedir}/src/main/resources-filtered</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>com.jamesward</groupId>
@@ -115,7 +125,7 @@
                                     <artifactId>swagger-ui-dist</artifactId>
                                     <version>${swagger-ui-version}</version>
                                     <outputDirectory>${project.build.directory}/swagger-ui</outputDirectory>
-                                    <excludes>META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/index.html,META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/favicon-16x16.png,META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/favicon-32x32.png,META-INF/maven</excludes>
+                                    <excludes>META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/package.json,META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/index.html,META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/favicon-16x16.png,META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/favicon-32x32.png,META-INF/maven</excludes>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
