@@ -28,7 +28,6 @@ For a complete list of swagger configuration params refer [Swagger configuration
 
 ## Using this module in Spring Boot
 
-[Here](https://github.com/CAFapi/caf-swagger) is an example of how this swagger-ui can be used in a Spring Boot application : 
 1. Add the module as a `runtime` dependency.
 2. Include a resource file called **microfocus-config.js** with the swagger configuration overrides, similar to the one [here](./src/main/resources/microfocus-config.js).
 Make sure to overide the "url" param to point to your swagger contract.
@@ -37,15 +36,18 @@ Make sure to overide the "url" param to point to your swagger contract.
 ```java
 @Override
 public void addResourceHandlers(final ResourceHandlerRegistry registry) {
-    // configure the external-facing URI path by adding a resource handler
-    registry.addResourceHandler("/swagger/**");
-    // map that external-facing URI path internally to the physical path where the resources are actually located
-    registry.addResourceLocations(             
-                "classpath:/swagger/",
-                 contractPath,
-                 "classpath:/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.0.0/") 
-            .resourceChain(true)
-            .addResolver(new PathResourceResolver());
+
+    // Configure the external-facing URI path by adding a resource handler
+    final ResourceHandlerRegistration resourceHandlerRegistration = registry.addResourceHandler("/swagger/**");
+
+    // Map that external-facing URI path internally to the physical path where the resources are actually located
+    resourceHandlerRegistration.addResourceLocations(
+                                    "classpath:/swagger/",
+                                    swaggerContractPath,
+                                    "classpath:/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.0.0/");
+
+    final ResourceChainRegistration resourceChainRegistration = resourceRegistration.resourceChain(true);
+    resourceChainRegistration.addResolver(new PathResourceResolver());
 }
 ```
 
