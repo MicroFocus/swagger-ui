@@ -28,7 +28,7 @@
 
     <groupId>com.microfocus.webjars</groupId>
     <artifactId>swagger-ui-dist</artifactId>
-    <version>1.0.0-6</version>
+    <version>1.1.0-SNAPSHOT</version>
 
     <name>Micro Focus Swagger UI</name>
     <description>Micro Focus branded version of swagger ui</description>
