@@ -132,6 +132,21 @@
                             </resources>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>copy-to-docs-folder</id>
+                        <goals>
+                            <goal>copy-resources</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/docs</outputDirectory>
+                            <resources>
+                                <resource>
+                                    <directory>${project.build.outputDirectory}/META-INF/resources/webjars/microfocus-swagger-ui-dist/${version.unrevise}</directory>
+                                </resource>
+                            </resources>
+                        </configuration>
+                    </execution>
                 </executions>
                 <configuration>
                     <outputDirectory>${project.build.outputDirectory}/META-INF/resources/webjars/microfocus-swagger-ui-dist/${version.unrevise}</outputDirectory>
