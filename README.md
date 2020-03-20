@@ -60,9 +60,9 @@ Make sure to overide the "url" param to point to your swagger contract.
 @Override
 public void initialize(Bootstrap<T> bootstrap) {
     bootstrap.addBundle(new AssetsBundle(
-            "/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.0.0/", "/swagger/", "index.html", "swagger-ui"));
+        "/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.0.0/", "/swagger/", "index.html", "swagger-ui"));
     bootstrap.addBundle(new AssetsBundle(
-            "/swagger-ui-config.js", "/swagger/microfocus-config.js", null, "swagger-ui-config"));
+        "/swagger-ui-config.js", "/swagger/microfocus-config.js", null, "swagger-ui-config"));
 
     super.initialize(bootstrap);
 }
@@ -113,7 +113,7 @@ Make sure to overide the "url" param to point to your swagger contract.
             <resource>
                 <!--Include swagger-ui assets-->
                 <directory>
-                    ${project.build.directory}/swagger-ui/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.0.0
+                  ${project.build.directory}/swagger-ui/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.0.0
                 </directory>
                 <targetPath>.</targetPath>
             </resource>
@@ -125,7 +125,7 @@ Make sure to overide the "url" param to point to your swagger contract.
             <resource>
                 <!--Include swagger contract-->
                 <directory>
-                    ${project.build.directory}/swagger-contract/com/hpe/darwin/tag/service/contract
+                  ${project.build.directory}/swagger-contract/com/hpe/darwin/tag/service/contract
                 </directory>
                 <targetPath>api-docs</targetPath>
             </resource>
