@@ -135,3 +135,11 @@ Make sure to overide the "url" param to point to your swagger contract.
 </plugin>
 ```
 
+## Using as an NPM package
+This module, `microfocus-swagger-ui-dist`, is a dependency-free module that includes everything required to serve MicroFocus-branded Swagger UI in a server-side project, or a single-page application that can't resolve npm module dependencies.
+
+    npm install git+ssh://git@github.com/MicroFocus/swagger-ui.git#v1.0.0-dist
+
+Or alternatively if you prefer not to use a **git** url:
+
+    npm install https://github.com/MicroFocus/swagger-ui/archive/v1.0.0-dist.tar.gz
