@@ -62,7 +62,7 @@
         <copyrightNotice>Copyright ${copyrightYear} Micro Focus or one of its affiliates.</copyrightNotice>
         <enforceCorrectDependencies>true</enforceCorrectDependencies>
         <enforceBannedDependencies>true</enforceBannedDependencies>
-        <swagger-ui-version>3.25.0</swagger-ui-version>
+        <swagger-ui-version>3.52.0</swagger-ui-version>
     </properties>
 
     <build>
