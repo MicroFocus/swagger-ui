@@ -1,6 +1,6 @@
 <!--
 
-    Copyright 2020 Micro Focus or one of its affiliates.
+    Copyright 2021 Micro Focus or one of its affiliates.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -58,7 +58,7 @@
     </scm>
 
     <properties>
-        <copyrightYear>2020</copyrightYear>
+        <copyrightYear>2021</copyrightYear>
         <copyrightNotice>Copyright ${copyrightYear} Micro Focus or one of its affiliates.</copyrightNotice>
         <enforceCorrectDependencies>true</enforceCorrectDependencies>
         <enforceBannedDependencies>true</enforceBannedDependencies>
