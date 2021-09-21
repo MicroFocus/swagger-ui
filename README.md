@@ -1,4 +1,4 @@
-# Micro Focus Swagger UI
+# Micro Focus Swagger UIx
 
 This project is a Micro Focus branded version of the [Swagger UI](https://github.com/swagger-api/swagger-ui).
 
