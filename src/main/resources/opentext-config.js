@@ -1,5 +1,5 @@
 /*
- * Copyright 2020-2021 Micro Focus or one of its affiliates.
+ * Copyright 2020-2023 Open Text.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 window.onload = function () {
-    document.title = "Micro Focus Swagger UI";
+    document.title = "OpenText Swagger UI";
     window.ui = SwaggerUIBundle({
         url: "https://petstore.swagger.io/v2/swagger.json",
         dom_id: '#swagger-ui',
