@@ -1,5 +1,5 @@
-/**
- * Copyright 2020-2021 Micro Focus or one of its affiliates.
+/*
+ * Copyright 2020-2023 Open Text.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,27 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-.topbar {
-    background-color: #0073e7 !important;
-}
-
-.swagger-ui .topbar a img{
-    width: 0% !important
-}
-
-.swagger-ui .topbar a {
-    background-image: url(mf_logo_white.svg);
-    background-repeat: no-repeat;
-}
-
-.swagger-ui .topbar .download-url-wrapper input {
-    border: 2px solid #ffff !important;
-}
-
-.swagger-ui .topbar .download-url-wrapper .download-url-button {
-    background: #0073e7;
-    color: #ffff;
-    border: 2px solid #ffff;
-}
-
+window.onload = function () {
+    document.title = "OpenText Swagger UI";
+    window.ui = SwaggerUIBundle({
+        url: "https://petstore.swagger.io/v2/swagger.json",
+        dom_id: '#swagger-ui',
+        deepLinking: true,
+        presets: [
+            SwaggerUIBundle.presets.apis,
+            SwaggerUIStandalonePreset
+        ],
+        plugins: [
+            SwaggerUIBundle.plugins.DownloadUrl
+        ],
+        layout: "StandaloneLayout"
+    });
+};

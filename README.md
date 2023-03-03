@@ -1,6 +1,6 @@
-# Micro Focus Swagger UI
+# Open Text Swagger UI
 
-This project is a Micro Focus branded version of the [Swagger UI](https://github.com/swagger-api/swagger-ui).
+This project is an Open Text branded version of the [Swagger UI](https://github.com/swagger-api/swagger-ui).
 
 ## Usage
 
@@ -13,9 +13,9 @@ It can be used from another Java project by including the following dependency:
 </dependency>
 ```
 
-To override swagger configuration params include a **microfocus-config.js** file, similar to the one [here](./src/main/resources/microfocus-config.js):
+To override swagger configuration params include a **opentext-config.js** file, similar to the one [here](./src/main/resources/opentext-config.js):
 
-Swagger configuration params that can be set in microfocus-config.js:
+Swagger configuration params that can be set in opentext-config.js:
  - url: "api-docs/swagger.yaml"
  - dom_id: "#swagger-ui
  - operationsSorter: "alpha"
@@ -29,7 +29,7 @@ For a complete list of swagger configuration params refer [Swagger configuration
 ## Using this module in Spring Boot
 
 1. Add the module as a `runtime` dependency.
-2. Include a resource file called **microfocus-config.js** with the swagger configuration overrides, similar to the one [here](./src/main/resources/microfocus-config.js).
+2. Include a resource file called **opentext-config.js** with the swagger configuration overrides, similar to the one [here](./src/main/resources/opentext-config.js).
 Make sure to overide the "url" param to point to your swagger contract.
 3. To facilitate [serving static resources](https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/config/annotation/ResourceHandlerRegistry.html) in Spring Boot override the `addResourceHandlers` function in 
 
@@ -44,7 +44,7 @@ public void addResourceHandlers(final ResourceHandlerRegistry registry) {
     resourceHandlerRegistration.addResourceLocations(
                                     "classpath:/swagger/",
                                     swaggerContractPath,
-                                    "classpath:/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.0.0/");
+                                    "classpath:/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.2.0/");
 
     final ResourceChainRegistration resourceChainRegistration = resourceRegistration.resourceChain(true);
     resourceChainRegistration.addResolver(new PathResourceResolver());
@@ -54,7 +54,7 @@ public void addResourceHandlers(final ResourceHandlerRegistry registry) {
 ## Using this module in Dropwizard
 
 1. Add the module as a `runtime` dependency.
-2. Include a resource file called **swagger-ui-config.js** to override the swagger configuration, similar to the one [here](./src/main/resources/microfocus-config.js).
+2. Include a resource file called **swagger-ui-config.js** to override the swagger configuration, similar to the one [here](./src/main/resources/opentext-config.js).
 Make sure to overide the "url" param to point to your swagger contract.
 3. To facilitate serving static resources in Dropwizard add [AssetBundles](https://www.dropwizard.io/en/latest/manual/core.html#bundles)
 
@@ -64,14 +64,14 @@ public void initialize(Bootstrap<T> bootstrap) {
     bootstrap.addBundle(new AssetsBundle(
         "/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.0.0/", "/swagger/", "index.html", "swagger-ui"));
     bootstrap.addBundle(new AssetsBundle(
-        "/swagger-ui-config.js", "/swagger/microfocus-config.js", null, "swagger-ui-config"));
+        "/swagger-ui-config.js", "/swagger/opentext-config.js", null, "swagger-ui-config"));
 
     super.initialize(bootstrap);
 }
 ```
 
 ## Using this module in Tomcat
-1. Include a resource file called **microfocus-config.js** with the swagger configuration overrides, similar to the one [here](./src/main/resources/microfocus-config.js).
+1. Include a resource file called **opentext-config.js** with the swagger configuration overrides, similar to the one [here](./src/main/resources/opentext-config.js).
 Make sure to overide the "url" param to point to your swagger contract.
 2. Repackage the swagger assets into the war file to be deployed in Tomcat.
 
@@ -93,7 +93,7 @@ Make sure to overide the "url" param to point to your swagger contract.
                         <version>1.0.0</version>
                         <outputDirectory>${project.build.directory}/swagger-ui</outputDirectory>
                         <excludes>
-                            META-INF/resources/webjars/microfocus-swagger-ui-dist/1.0.0/microfocus-config.js
+                            META-INF/resources/webjars/microfocus-swagger-ui-dist/1.2.0/opentext-config.js
                         </excludes>
                     </artifactItem>
                 </artifactItems>
@@ -114,12 +114,12 @@ Make sure to overide the "url" param to point to your swagger contract.
             <resource>
                 <!--Include swagger-ui assets-->
                 <directory>
-                  ${project.build.directory}/swagger-ui/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.0.0
+                  ${project.build.directory}/swagger-ui/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.2.0
                 </directory>
                 <targetPath>.</targetPath>
             </resource>
             <resource>
-                <!--Include microfocus-config.js overide file from src/main/html-->
+                <!--Include opentext-config.js overide file from src/main/html-->
                 <directory>src/main/html</directory>
                 <targetPath>.</targetPath>
             </resource>
@@ -136,10 +136,10 @@ Make sure to overide the "url" param to point to your swagger contract.
 ```
 
 ## Using as an NPM package
-This module, `microfocus-swagger-ui-dist`, is a dependency-free module that includes everything required to serve MicroFocus-branded Swagger UI in a server-side project, or a single-page application that can't resolve npm module dependencies.
+This module, `microfocus-swagger-ui-dist`, is a dependency-free module that includes everything required to serve OpenText-branded Swagger UI in a server-side project, or a single-page application that can't resolve npm module dependencies.
 
-    npm install git+ssh://git@github.com/MicroFocus/swagger-ui.git#v1.0.0-dist
+    npm install git+ssh://git@github.com/MicroFocus/swagger-ui.git#v1.2.0-dist
 
 Or alternatively if you prefer not to use a **git** url:
 
-    npm install https://github.com/MicroFocus/swagger-ui/archive/v1.0.0-dist.tar.gz
+    npm install https://github.com/MicroFocus/swagger-ui/archive/v1.2.0-dist.tar.gz
