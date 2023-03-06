@@ -1,5 +1,5 @@
 {
-    "name": "microfocus-swagger-ui-dist",
+    "name": "opentext-swagger-ui-dist",
     "version": "${version.unrevise}",
     "main": "index.js",
     "repository": "git@github.com:MicroFocus/swagger-ui.git",
