@@ -8,6 +8,6 @@ ${version-number}
 
 ####Breaking Changes
 - US635012: As part of the rebrand the swagger configuration file has been renamed from `microfocus-config.js` to `opentext-config.js`.  
-The npm package has also been renamed from `opentext-swagger-ui-dist` to `opentext-swagger-ui-dist`.
+The npm package has also been renamed from `microfocus-swagger-ui-dist` to `opentext-swagger-ui-dist`.
 
 #### Known Issues
