@@ -44,7 +44,7 @@ public void addResourceHandlers(final ResourceHandlerRegistry registry) {
     resourceHandlerRegistration.addResourceLocations(
                                     "classpath:/swagger/",
                                     swaggerContractPath,
-                                    "classpath:/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.2.0/");
+                                    "classpath:/META-INF/resources/webjars/opentext-swagger-ui-dist/2.0.0/");
 
     final ResourceChainRegistration resourceChainRegistration = resourceRegistration.resourceChain(true);
     resourceChainRegistration.addResolver(new PathResourceResolver());
@@ -62,7 +62,7 @@ Make sure to overide the "url" param to point to your swagger contract.
 @Override
 public void initialize(Bootstrap<T> bootstrap) {
     bootstrap.addBundle(new AssetsBundle(
-        "/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.0.0/", "/swagger/", "index.html", "swagger-ui"));
+        "/META-INF/resources/webjars/opentext-swagger-ui-dist/2.0.0/", "/swagger/", "index.html", "swagger-ui"));
     bootstrap.addBundle(new AssetsBundle(
         "/swagger-ui-config.js", "/swagger/opentext-config.js", null, "swagger-ui-config"));
 
@@ -93,7 +93,7 @@ Make sure to overide the "url" param to point to your swagger contract.
                         <version>1.0.0</version>
                         <outputDirectory>${project.build.directory}/swagger-ui</outputDirectory>
                         <excludes>
-                            META-INF/resources/webjars/microfocus-swagger-ui-dist/1.2.0/opentext-config.js
+                            META-INF/resources/webjars/opentext-swagger-ui-dist/2.0.0/opentext-config.js
                         </excludes>
                     </artifactItem>
                 </artifactItems>
@@ -114,7 +114,7 @@ Make sure to overide the "url" param to point to your swagger contract.
             <resource>
                 <!--Include swagger-ui assets-->
                 <directory>
-                  ${project.build.directory}/swagger-ui/META-INF/resources/webjars/microfocus-swagger-ui-dist/1.2.0
+                  ${project.build.directory}/swagger-ui/META-INF/resources/webjars/opentext-swagger-ui-dist/2.0.0
                 </directory>
                 <targetPath>.</targetPath>
             </resource>
@@ -136,10 +136,10 @@ Make sure to overide the "url" param to point to your swagger contract.
 ```
 
 ## Using as an NPM package
-This module, `microfocus-swagger-ui-dist`, is a dependency-free module that includes everything required to serve OpenText-branded Swagger UI in a server-side project, or a single-page application that can't resolve npm module dependencies.
+This module, `opentext-swagger-ui-dist`, is a dependency-free module that includes everything required to serve OpenText-branded Swagger UI in a server-side project, or a single-page application that can't resolve npm module dependencies.
 
-    npm install git+ssh://git@github.com/MicroFocus/swagger-ui.git#v1.2.0-dist
+    npm install git+ssh://git@github.com/MicroFocus/swagger-ui.git#v2.0.0-dist
 
 Or alternatively if you prefer not to use a **git** url:
 
-    npm install https://github.com/MicroFocus/swagger-ui/archive/v1.2.0-dist.tar.gz
+    npm install https://github.com/MicroFocus/swagger-ui/archive/v2.0.0-dist.tar.gz
