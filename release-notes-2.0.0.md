@@ -1,5 +1,3 @@
-!not-ready-for-release!
-
 #### Version Number
 ${version-number}
 
@@ -11,3 +9,4 @@ ${version-number}
 The npm package has also been renamed from `microfocus-swagger-ui-dist` to `opentext-swagger-ui-dist`.
 
 #### Known Issues
+- None
