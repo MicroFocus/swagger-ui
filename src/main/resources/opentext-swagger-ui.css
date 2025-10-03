@@ -17,8 +17,8 @@
     background-color: #0073e7 !important;
 }
 
-.swagger-ui .topbar a img{
-    width: 0% !important
+.swagger-ui .topbar a svg g {
+    display: none
 }
 
 .swagger-ui .topbar a {
