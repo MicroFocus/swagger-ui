@@ -1,6 +1,6 @@
 <!--
 
-    Copyright 2020-2024 Open Text.
+    Copyright 2020-2025 Open Text.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -58,7 +58,7 @@
     </scm>
 
     <properties>
-        <copyrightYear>2024</copyrightYear>
+        <copyrightYear>2025</copyrightYear>
         <enforceCorrectDependencies>true</enforceCorrectDependencies>
         <enforceBannedDependencies>true</enforceBannedDependencies>
         <swagger-ui-version>5.29.1</swagger-ui-version>
