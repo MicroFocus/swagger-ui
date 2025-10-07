@@ -1,5 +1,5 @@
 /**
- * Copyright 2020-2023 Open Text.
+ * Copyright 2020-2025 Open Text.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,8 +17,8 @@
     background-color: #0073e7 !important;
 }
 
-.swagger-ui .topbar a img{
-    width: 0% !important
+.swagger-ui .topbar a svg g {
+    display: none
 }
 
 .swagger-ui .topbar a {
