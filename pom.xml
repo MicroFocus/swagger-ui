@@ -61,7 +61,7 @@
         <copyrightYear>2024</copyrightYear>
         <enforceCorrectDependencies>true</enforceCorrectDependencies>
         <enforceBannedDependencies>true</enforceBannedDependencies>
-        <swagger-ui-version>3.52.0</swagger-ui-version>
+        <swagger-ui-version>5.29.1</swagger-ui-version>
     </properties>
 
     <build>
@@ -106,7 +106,8 @@
                                     <artifactId>swagger-ui-dist</artifactId>
                                     <version>${swagger-ui-version}</version>
                                     <outputDirectory>${project.build.directory}/swagger-ui</outputDirectory>
-                                    <excludes>META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/package.json,META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/index.html,META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/favicon-16x16.png,META-INF/resources/webjars/swagger-ui-dist/${swagger-ui-version}/favicon-32x32.png,META-INF/maven</excludes>
+                                    <includes>**/*.js,**/*.html,**/*.css</includes>
+                                    <excludes>**/index.html</excludes>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
